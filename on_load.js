@@ -1,6 +1,4 @@
-/* Content script that runs when our Cyclops whiteboard page loads */
-
-console.log("Cyclops is performing it's starting tasks");
+/* Content script that runs when page loads */
 
 // Call init on the background script
 chrome.extension.sendRequest({action: "init"});
