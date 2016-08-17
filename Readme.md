@@ -2,8 +2,9 @@ ReadForMe
 ======================================
 
 Let your browser read for you. Because who isn't lazy?
-  
+
 To get started:
+
 1. Clone the repository.
 2. In Google Chrome, go to `Settings -> Extensions`.
 3. Check the `Developer mode` checkbox.
