@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "ReadForMe",
+  "name": "Read For Me",
   "description": "Let your browser read for you. Because who isn't lazy?",
-  "version": "1.0",
+  "version": "1.2",
 
   "browser_action": {
    "default_icon": "icon.png"
@@ -14,7 +14,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["jquery.min.js", "on_load.js"],
+      "js": ["jquery.min.js", "async.min.js", "on_load.js"],
       "css": ["injection.css"],
       "run_at": "document_idle"
     }
