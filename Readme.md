@@ -1,7 +1,9 @@
-ReadForMe
+Read For Me
 ======================================
 
 Let your browser read for you. Because who isn't lazy?
+
+[Download it here!](https://chrome.google.com/webstore/detail/read-for-me/nlkbaehiekbkmneonidipohlflcndkio)
 
 To get started:
 
