@@ -86,10 +86,10 @@ $('h1,h2,h3,h4,h5,h6,p,blockquote,ul').click(function(){
 			}
 
 			var chunks = chunkText
-								.replace('?', '~')
-								.replace('!', '~')
-								.replace('.', '~')
-								.replace(',', '~')
+								.replace(/\?/g, '~')
+								.replace(/\!/g, '~')
+								.replace(/\./g, '~')
+								.replace(/\,/g, '~')
 								.split('~');
 			reading = true;
 			chainDone = false;
