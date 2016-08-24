@@ -38,11 +38,11 @@ $(document).ready(function(){
 	}, 100);
 });
 
-$('h1,h2,h3,h4,h5,h6,p,blockquote').mouseover(function(){
+$('h1,h2,h3,h4,h5,h6,p,blockquote,ul').mouseover(function(){
 	$(this).addClass('yellow');
 });
 
-$('h1,h2,h3,h4,h5,h6,p,blockquote').mouseout(function(){
+$('h1,h2,h3,h4,h5,h6,p,blockquote,ul').mouseout(function(){
 	$(this).removeClass('yellow');
 });
 
@@ -63,7 +63,7 @@ function cancel() {
 	window.speechSynthesis.cancel();
 }
 
-$('h1,h2,h3,h4,h5,h6,p,blockquote').click(function(){
+$('h1,h2,h3,h4,h5,h6,p,blockquote,ul').click(function(){
 	var self = this;
 
 	if ('speechSynthesis' in window) {
@@ -72,7 +72,20 @@ $('h1,h2,h3,h4,h5,h6,p,blockquote').click(function(){
 
 		function performSpeech(){
 			// Turn text into chunks
-			var chunks = $(self).text()
+			var chunkText = '';
+			if($(self).is('ul')){
+				var items = $(self).find('li');
+				for (key in items){
+					var item = items[key];
+					if(item.innerText){
+						chunkText += item.innerText + ". ";
+					}
+				}
+			} else {
+				chunkText = $(self).text();
+			}
+
+			var chunks = chunkText
 								.replace('?', '~')
 								.replace('!', '~')
 								.replace('.', '~')
