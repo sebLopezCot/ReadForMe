@@ -3,7 +3,7 @@
 
   "name": "Read For Me",
   "description": "Let your browser read for you. Because who isn't lazy?",
-  "version": "1.4",
+  "version": "1.5",
 
   "browser_action": {
    "default_icon": "icon.png",
