@@ -6,7 +6,9 @@
   "version": "1.4",
 
   "browser_action": {
-   "default_icon": "icon.png"
+   "default_icon": "icon.png",
+   "default_popup": "popup.html",
+   "default_title": "Click here to toggle page speaking."
   },
   "background": {
     "scripts": ["background.js"]
